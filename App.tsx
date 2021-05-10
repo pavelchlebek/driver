@@ -1,14 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+
+import TestComponent from "./src/testCmp";
 
 export default function App() {
-  let appName: string = "Driver App"
-  appName = "Driver App v 1.0.0"
+  let appName: string = "Driver App";
+  appName = "Driver App v 1.0.0";
 
   return (
     <View style={styles.container}>
-      <Text>And now the {appName} is running!!!</Text>
+      <TestComponent name={appName} />
       <StatusBar style="auto" />
     </View>
   );
@@ -17,8 +19,8 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "#fff",
+    alignItems: "center",
+    justifyContent: "center",
   },
 });
