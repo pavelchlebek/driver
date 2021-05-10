@@ -33,11 +33,11 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "#ffffff",
-    padding: 10,
+    padding: 6,
     fontWeight: "bold",
   },
   clicked: {
-    color: "#22cc22",
+    color: "#ffffff",
     padding: 10,
     fontWeight: "bold",
   },
