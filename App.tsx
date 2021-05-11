@@ -6,7 +6,7 @@ import TestComponent from "./src/testCmp";
 
 export default function App() {
   let appName: string = "Driver App";
-  appName = "Driver App v 1.0.0";
+  appName = "Driver App!!!";
 
   return (
     <View style={styles.container}>

@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
   clicked: {
     color: "#ffffff",
-    padding: 10,
+    padding: 16,
     fontWeight: "bold",
   },
 });
