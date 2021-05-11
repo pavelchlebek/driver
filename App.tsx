@@ -19,7 +19,7 @@ export default function App() {
       <Tab.Navigator
         tabBarOptions={{
           activeTintColor: "#fff",
-          inactiveTintColor: "#ccc",
+          inactiveTintColor: "#aaa",
           activeBackgroundColor: "#111",
           inactiveBackgroundColor: "#111",
         }}
