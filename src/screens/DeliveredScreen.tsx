@@ -1,16 +1,17 @@
-import React from "react";
-import { Text, View } from "react-native";
+import React from 'react';
 
-import TestCmp from "../testCmp";
+import { View } from 'react-native';
+
+import { TestComponent } from '../testCmp';
 
 function DeliveredScreen() {
   return (
     <View
-      style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#444" }}
+      style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#444' }}
     >
-      <TestCmp name="Delivered Orders Here!" />
+      <TestComponent name="Delivered Orders Here!" />
     </View>
-  );
+  )
 }
 
-export default DeliveredScreen;
+export default DeliveredScreen

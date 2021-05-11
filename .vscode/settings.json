@@ -1,0 +1,40 @@
+{
+  "editor.formatOnSave": true,
+  "javascript.validate.enable": true,
+  "typescript.validate.enable": true,
+  "typescript.format.enable": false,
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.packageManager": "yarn",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  // https://github.com/daidodo/tsimportsorter
+  "tsImportSorter.configuration.groupRules": ["macro$", {}, "^[~]", "^[.]"],
+  "tsImportSorter.configuration.keepUnused": ["macro$", "lingui$"],
+  "tsImportSorter.configuration.formatExports": false, // let me sort exported stories pls
+  "tsImportSorter.configuration.sortRules.names": ["_", "aA"],
+  "tsImportSorter.configuration.sortRules.paths": ["_", "aA"],
+  // https://github.com/daidodo/format-imports/wiki/Line-Wrapping-Style
+  "tsImportSorter.configuration.wrappingStyle.maxBindingNamesPerLine": 0,
+  "tsImportSorter.configuration.wrappingStyle.maxDefaultAndBindingNamesPerLine": 0,
+  "eslint.workingDirectories": ["src"],
+  "peacock.color": "#e86a57",
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#ee9284",
+    "activityBar.activeBorder": "#e3fbe6",
+    "activityBar.background": "#ee9284",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#e3fbe6",
+    "activityBarBadge.foreground": "#15202b",
+    "statusBar.background": "#e86a57",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#e2422a",
+    "titleBar.activeBackground": "#e86a57",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#e86a5799",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "cSpell.words": ["chakra"]
+}
