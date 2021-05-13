@@ -1,16 +1,23 @@
 import React from 'react'
-import { View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 
-import { TestComponent } from '../testCmp'
+import { TestComponent } from '../components/TestComponent'
 
-function GettingReadyScreen() {
+type TProps = NoChildren
+
+export const GettingReadyScreen: React.FC<TProps> = () => {
   return (
-    <View
-      style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#444' }}
-    >
+    <View style={styles.screen}>
       <TestComponent name="Getting ready orders" />
     </View>
   )
 }
 
-export default GettingReadyScreen
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#444',
+  },
+})

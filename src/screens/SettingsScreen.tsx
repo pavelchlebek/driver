@@ -1,16 +1,24 @@
 import React from 'react'
-import { View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
-import { TestComponent } from '../testCmp'
+type TProps = NoChildren
 
-function SettingsScreen() {
+export const SettingsScreen: React.FC<TProps> = () => {
   return (
-    <View
-      style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#444' }}
-    >
-      <TestComponent name="Settings Here!" />
+    <View style={styles.screen}>
+      <Text style={styles.heading}>Driver settings</Text>
     </View>
   )
 }
 
-export default SettingsScreen
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#444',
+  },
+  heading: {
+    color: '#fff',
+  },
+})

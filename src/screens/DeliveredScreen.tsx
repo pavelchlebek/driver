@@ -1,17 +1,24 @@
-import React from 'react';
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 
-import { View } from 'react-native';
+type TProps = NoChildren
 
-import { TestComponent } from '../testCmp';
-
-function DeliveredScreen() {
+export const DeliveredScreen: React.FC<TProps> = () => {
   return (
-    <View
-      style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#444' }}
-    >
-      <TestComponent name="Delivered Orders Here!" />
+    <View style={styles.screen}>
+      <Text style={styles.heading}>Delivered so far</Text>
     </View>
   )
 }
 
-export default DeliveredScreen
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#444',
+  },
+  heading: {
+    color: '#fff',
+  },
+})

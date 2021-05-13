@@ -1,12 +1,24 @@
 import React from 'react'
-import { Text, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 
-function LogoutScreen() {
+type TProps = NoChildren
+
+export const LogoutScreen: React.FC<TProps> = () => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Logout here!</Text>
+    <View style={styles.screen}>
+      <Text style={styles.heading}>You can logout here!</Text>
     </View>
   )
 }
 
-export default LogoutScreen
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#444',
+  },
+  heading: {
+    color: '#fff',
+  },
+})

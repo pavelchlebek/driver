@@ -5,10 +5,10 @@ import { NavigationContainer } from '@react-navigation/native'
 import React from 'react'
 import { StyleSheet } from 'react-native'
 
-import DeliveryScreen from './src/screens/DeliveryScreen'
-import GettingReadyScreen from './src/screens/GettingReadyScreen'
-import LogoutScreen from './src/screens/LogOutScreen'
-import TakeOverScreen from './src/screens/TakeOverScreen'
+import { DeliveryScreen } from './src/screens/DeliveryScreen'
+import { GettingReadyScreen } from './src/screens/GettingReadyScreen'
+import { LogoutScreen } from './src/screens/LogOutScreen'
+import { TakeOverScreen } from './src/screens/TakeOverScreen'
 
 export default function App() {
   const Tab = createBottomTabNavigator()

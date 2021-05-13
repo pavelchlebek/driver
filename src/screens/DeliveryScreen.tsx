@@ -1,12 +1,24 @@
-import React from "react";
-import { Text, View } from "react-native";
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native'
 
-function DeliveryScreen() {
+type TProps = NoChildren
+
+export const DeliveryScreen: React.FC<TProps> = () => {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Delivery Content Here!</Text>
+    <View style={styles.screen}>
+      <Text style={styles.heading}>Being Delivered!</Text>
     </View>
-  );
+  )
 }
 
-export default DeliveryScreen;
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#444',
+  },
+  heading: {
+    color: '#fff',
+  },
+})

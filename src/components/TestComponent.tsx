@@ -1,24 +1,18 @@
 import React, { useState } from 'react'
-
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
-type Props = {
+type TProps = {
   name: string
 }
 
-export const TestComponent: React.FC<Props> = ({ name }) => {
+export const TestComponent: React.FC<TProps> = ({ name }) => {
   const [clicked, setClicked] = useState(false)
 
   const handleClick = () => {
     setClicked(!clicked)
   }
 
-  // const getAttachedStyles = (clicked: boolean) => {
-  //   return clicked ? { ...styles.text, ...styles.clicked } : styles.text
-  // }
-
   const attatchedStyles = clicked ? { ...styles.text, ...styles.clicked } : styles.text
-  // [styles.text, styles.clicked].join(" ")
 
   return (
     <TouchableOpacity style={styles.wrapper} onPress={handleClick}>
@@ -46,5 +40,3 @@ const styles = StyleSheet.create({
     padding: 16,
   },
 })
-
-// export default TestComponent;
