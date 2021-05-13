@@ -1,16 +1,16 @@
-import React from "react";
-import { Text, View } from "react-native";
+import React from 'react'
+import { View } from 'react-native'
 
-import TestCmp from "../testCmp";
+import { TestComponent } from '../testCmp'
 
 function SettingsScreen() {
   return (
     <View
-      style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#444" }}
+      style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#444' }}
     >
-      <TestCmp name="Settings Here!" />
+      <TestComponent name="Settings Here!" />
     </View>
-  );
+  )
 }
 
-export default SettingsScreen;
+export default SettingsScreen

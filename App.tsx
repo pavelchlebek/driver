@@ -1,27 +1,26 @@
-import "react-native-gesture-handler";
-import { NavigationContainer } from "@react-navigation/native";
+import 'react-native-gesture-handler'
 
-import { StatusBar } from "expo-status-bar";
-import React from "react";
-import { StyleSheet, Text, View, SafeAreaView } from "react-native";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import { NavigationContainer } from '@react-navigation/native'
+import React from 'react'
+import { StyleSheet } from 'react-native'
 
-import GettingReadyScreen from "./src/screens/GettingReadyScreen";
-import DeliveryScreen from "./src/screens/DeliveryScreen";
-import LogoutScreen from "./src/screens/LogOutScreen";
-import TakeOverScreen from "./src/screens/TakeOverScreen";
+import DeliveryScreen from './src/screens/DeliveryScreen'
+import GettingReadyScreen from './src/screens/GettingReadyScreen'
+import LogoutScreen from './src/screens/LogOutScreen'
+import TakeOverScreen from './src/screens/TakeOverScreen'
 
 export default function App() {
-  const Tab = createBottomTabNavigator();
+  const Tab = createBottomTabNavigator()
 
   return (
     <NavigationContainer>
       <Tab.Navigator
         tabBarOptions={{
-          activeTintColor: "#fff",
-          inactiveTintColor: "#aaa",
-          activeBackgroundColor: "#111",
-          inactiveBackgroundColor: "#111",
+          activeTintColor: '#fff',
+          inactiveTintColor: '#aaa',
+          activeBackgroundColor: '#111',
+          inactiveBackgroundColor: '#111',
         }}
       >
         <Tab.Screen name="Připravované" component={GettingReadyScreen} />
@@ -30,14 +29,14 @@ export default function App() {
         <Tab.Screen name="Odhlášení" component={LogoutScreen} />
       </Tab.Navigator>
     </NavigationContainer>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#333",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#333',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
-});
+})

@@ -347,27 +347,19 @@
   "emotion styled/css prop": {
     "scope": "css",
     "prefix": "sprop",
-    "body": [
-      "${({$1}) => ($1$2)}"
-    ],
+    "body": ["${({$1}) => ($1$2)}"],
     "description": "emotion styled/css prop"
   },
   "emotion styled/css theme prop": {
     "scope": "css",
     "prefix": "stprop",
-    "body": [
-      "${({ theme }) => (theme.$1)}${0}"
-    ],
+    "body": ["${({ theme }) => (theme.$1)}${0}"],
     "description": "emotion styled/css prop.theme"
   },
   "media breakpoint": {
     "scope": "css",
     "prefix": "mbreak",
-    "body": [
-      "@media only screen and $1 {",
-      "\t$2",
-      "}"
-    ],
+    "body": ["@media only screen and $1 {", "\t$2", "}"],
     "description": "media breakpoint"
   },
 
