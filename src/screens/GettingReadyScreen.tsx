@@ -1,14 +1,14 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 
-import { TestComponent } from '../components/TestComponent'
+import { PreparedItem } from '../components/PreparedItem'
 
 type TProps = NoChildren
 
 export const GettingReadyScreen: React.FC<TProps> = () => {
   return (
     <View style={styles.screen}>
-      <TestComponent name="Getting ready orders" />
+      <PreparedItem order={54} restaurant="Pizza Time" />
     </View>
   )
 }

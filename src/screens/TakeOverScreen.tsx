@@ -1,19 +1,22 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
 
-import { Button } from '../components/Button'
+import { StyleSheet, Text, View } from 'react-native';
+
+import { Button } from '../components/Button';
 
 type TProps = NoChildren
 
+// type TFunc = (buttonName: string) => void
+
 export const TakeOverScreen: React.FC<TProps> = () => {
-  const handlePress: AnyFunction = (buttonName: string) => {
+  const handlePress = (buttonName: string) => {
     console.log(`Button ${buttonName} pressed!`)
   }
 
   return (
     <View style={styles.screen}>
       <Text style={styles.heading}>Orders for takeover!</Text>
-      <Button title="hotovo" color="success" onPress={handlePress.bind(null, 'hotovo')} />
+      <Button title="hotovo" color="success" onPress={() => handlePress('hotovo')} />
       <Button title="odhlásit" color="danger" onPress={handlePress.bind(null, 'odhlásit')} />
       <View style={styles.buttonGroup}>
         <View style={styles.btn}>

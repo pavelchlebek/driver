@@ -1,24 +1,52 @@
 import React from 'react'
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
-type TProps = NoChildren & {
-  color?: string
-  title: string
-  onPress: AnyFunction
-}
+type TColor = `success` | `danger`
 
-export const Button: React.FC<TProps> = ({ color, title, onPress }) => {
-  let buttonStyle = styles.button
-  switch (color) {
-    case 'success':
-      buttonStyle = { ...styles.button, ...styles.success }
-      break
-    case 'danger':
-      buttonStyle = { ...styles.button, ...styles.danger }
+type TButtonProps = Pick<PropsOf<typeof TouchableOpacity>, 'onPress'>
+
+type TProps = NoChildren &
+  TButtonProps & {
+    color?: TColor
+    title: string
+    // getColorLabel: (color: TColor) => string
+    // getColorLabel2: PropsOf<typeof TouchableOpacity>['onLayout']
+  }
+
+export const Button: React.FC<TProps> = ({
+  color,
+  title,
+  // getColorLabel,
+  // getColorLabel2,
+  children,
+  ...buttonProps
+}) => {
+  // let buttonStyle = styles.button
+
+  // switch (color) {
+  //   case 'success':
+  //     buttonStyle = { ...styles.button, ...styles.success }
+  //     break
+  //   case 'danger':
+  //     buttonStyle = { ...styles.button, ...styles.danger }
+  // }
+
+  // const label = getColorLabel(color ?? `success`)
+
+  const getButtonStyles = () => {
+    switch (color) {
+      case `success`:
+        return { ...styles.button, ...styles.success }
+      case `danger`:
+        return { ...styles.button, ...styles.danger }
+      default:
+        return styles.button
+    }
   }
 
   return (
-    <TouchableOpacity style={buttonStyle} onPress={onPress}>
+    // <TouchableOpacity {...buttonProps} style={getButtonStyles()} onLayout={getColorLabel2}>
+    <TouchableOpacity {...buttonProps} style={getButtonStyles()}>
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
   )
