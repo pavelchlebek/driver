@@ -25,7 +25,7 @@ export const preparedItems: preparedItem[] = [
     order: 53,
     restaurant: 'Pizza Time',
     address: 'Hlaváčová 207',
-    customerName: 'Dalimil Kalenda',
+    customerName: 'Dal Kalenda',
     amount: 477,
   },
 ]
