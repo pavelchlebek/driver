@@ -1,15 +1,16 @@
-import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
-import { PreparedItem } from '../components/PreparedItem'
-import { preparedItems } from '../data/data'
+import { PreparedItem } from '../components/PreparedItem';
+import { preparedItems } from '../data/data';
 
 type TProps = NoChildren
 
 export const GettingReadyScreen: React.FC<TProps> = () => {
   return (
-    <View style={styles.screen}>
-      {preparedItems.map((item) => {
+    <ScrollView style={styles.screen}>
+      {preparedItems.map((item, index) => {
         return (
           <PreparedItem
             address={item.address}
@@ -17,11 +18,11 @@ export const GettingReadyScreen: React.FC<TProps> = () => {
             amount={item.amount}
             order={item.order}
             restaurant={item.restaurant}
-            key={item.order}
+            key={index}
           />
         )
       })}
-    </View>
+    </ScrollView>
   )
 }
 

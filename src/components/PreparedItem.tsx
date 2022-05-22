@@ -1,5 +1,5 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 
 type TProps = NoChildren & {
   order: number
@@ -33,7 +33,6 @@ export const PreparedItem: React.FC<TProps> = ({
 
 const styles = StyleSheet.create({
   wrapper: {
-    borderColor: '#090',
     flexDirection: 'row',
     alignItems: 'center',
     marginBottom: 10,
